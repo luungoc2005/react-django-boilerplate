@@ -1,6 +1,6 @@
 This is a boilerplate for a project I'm working on
 Includes
-- Backend Django + SQLite
+- Backend Django + MySQL
 - Frontend React + Material UI + Toast (for responsive pages) + Normalizr (bits of HTML5 boilerplate) + Webpack
 
 ### Installation
