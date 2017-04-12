@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'stocksman.urls'
+ROOT_URLCONF = 'testapp.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'stocksman.wsgi.application'
+WSGI_APPLICATION = 'testapp.wsgi.application'
 
 
 # Database
