@@ -1,0 +1,22 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Example</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  </head>
+
+  <body style="
+      position: relative;
+      margin: 0;
+      padding-bottom: 6rem;
+      min-height: 100%;">
+    <div id="content">
+    </div>
+    {% render_bundle 'main' %}
+  </body>
+</html>
