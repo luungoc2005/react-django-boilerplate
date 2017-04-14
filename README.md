@@ -29,6 +29,8 @@ You probably should setup a new database yourself and setup like any other Djang
 
 Run `npm run webpack` at least once to compile all files into a js bundle. Later, if you want to edit any jsx or css files, run `npm run webpack` or `npm run webpack-watch` to compile modules
 
+You can also run `npm run start` to enable react hot loading. For production, run `npm run webpack-prod`
+
 Then, run
 `python manage.py runserver`
 To try out the site
