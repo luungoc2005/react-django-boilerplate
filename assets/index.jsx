@@ -20,6 +20,8 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import App from './components/app';
 
+import { AppContainer } from 'react-hot-loader';
+
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
@@ -37,16 +39,25 @@ const muiTheme = getMuiTheme({
 });
 
 ReactDOM.render(
-  <div className={styles.wrap}>
-    <MuiThemeProvider muiTheme={muiTheme}>
-      <Navbar />
-    </MuiThemeProvider>
-    <MuiThemeProvider muiTheme={muiTheme}>
-      <App />
-    </MuiThemeProvider>
-    <MuiThemeProvider muiTheme={muiTheme}>
-      <Footer />
-    </MuiThemeProvider>
-  </div>,
+  <AppContainer>
+    <div className={styles.wrap}>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <Navbar />
+      </MuiThemeProvider>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <App />
+      </MuiThemeProvider>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <Footer />
+      </MuiThemeProvider>
+    </div>
+  </AppContainer>,
   document.getElementById('content')
 );
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    render(App)
+  });
+}
